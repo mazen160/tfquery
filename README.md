@@ -2,6 +2,11 @@
 
 ## Run SQL queries on your Terraform infrastructure. Ask questions that are hard to answer
 
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mazen160/public/master/static/images/tfquery-demo.png" />
+</p>
+
 ---
 
 # 🚀 What is tfquery?
@@ -212,7 +217,7 @@ Would like to contribute to tfquery? Here are some ideas that you may start with
 
 - General validation of Terraform states parser implementation: Validate current implementation of the parser, and enhance it where possible.
 
-- Connect resources with terraform state base name: For environments with many workspaces, each workspace can have a different name, it would be nice to add a column for terraform state file base name, to help in querying across different workspaces.
+- [x] ~~Connect resources with terraform state base name: For environments with many workspaces, each workspace can have a different name, it would be nice to add a column for terraform state file base name, to help in querying across different workspaces.~~
 
 - tfplan parsing: Allow parsing of tfplan files. This can be an opening addition for implementing a new CI security scanner for Terraform deployments.
 
