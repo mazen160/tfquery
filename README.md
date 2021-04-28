@@ -223,6 +223,8 @@ Would like to contribute to tfquery? Here are some ideas that you may start with
 
 - Logo design: a logo design would be great.
 
+- Web interface representation with [coleifer/sqlite-web](https://github.com/coleifer/sqlite-web) - Thanks [@securityfu](https://twitter.com/securityfu/) for the idea!
+
 ### As you can see, there are many ways to support. Please help us make the project bigger for everyone!
 
 ---
