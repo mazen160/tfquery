@@ -1,0 +1,201 @@
+terraform_version = "0.14.7"
+
+outputs = {
+	"username": {
+		"name":      "username",
+		"sensitive": false,
+		"value":     "123456789123-acme-dev-user",
+	},
+}
+
+resources = {
+	"aws_ami.amazon-linux-2": {
+		"address":        "aws_ami.amazon-linux-2",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "data",
+		"module_address": "",
+		"name":           "amazon-linux-2",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_ami",
+		"values": {
+			"architecture": "x86_64",
+			"arn":          "arn:aws:ec2:us-west-1::image/ami-06d584c1805ad64fb",
+			"block_device_mappings": [
+				{
+					"device_name": "/dev/xvda",
+					"ebs": {
+						"delete_on_termination": "true",
+						"encrypted":             "false",
+						"iops":                  "0",
+						"snapshot_id":           "snap-0fbf7b35b6f00249f",
+						"throughput":            "0",
+						"volume_size":           "8",
+						"volume_type":           "standard",
+					},
+					"no_device":    "",
+					"virtual_name": "",
+				},
+			],
+			"creation_date":    "2021-03-26T23:02:09.000Z",
+			"description":      "Amazon Linux 2 AMI 2.0.20210326.0 x86_64 HVM ebs",
+			"ena_support":      true,
+			"executable_users": null,
+			"filter": [
+				{
+					"name": "name",
+					"values": [
+						"amzn2-ami-hvm-*-x86_64-ebs",
+					],
+				},
+				{
+					"name": "owner-alias",
+					"values": [
+						"amazon",
+					],
+				},
+			],
+			"hypervisor":        "xen",
+			"id":                "ami-06d584c1805ad64fb",
+			"image_id":          "ami-06d584c1805ad64fb",
+			"image_location":    "amazon/amzn2-ami-hvm-2.0.20210326.0-x86_64-ebs",
+			"image_owner_alias": "amazon",
+			"image_type":        "machine",
+			"kernel_id":         null,
+			"most_recent":       true,
+			"name":              "amzn2-ami-hvm-2.0.20210326.0-x86_64-ebs",
+			"name_regex":        null,
+			"owner_id":          "137112412989",
+			"owners": [
+				"amazon",
+			],
+			"platform":          null,
+			"platform_details":  "Linux/UNIX",
+			"product_codes":     [],
+			"public":            true,
+			"ramdisk_id":        null,
+			"root_device_name":  "/dev/xvda",
+			"root_device_type":  "ebs",
+			"root_snapshot_id":  "snap-0fbf7b35b6f00249f",
+			"sriov_net_support": "simple",
+			"state":             "available",
+			"state_reason": {
+				"code":    "UNSET",
+				"message": "UNSET",
+			},
+			"tags":                {},
+			"usage_operation":     "RunInstances",
+			"virtualization_type": "hvm",
+		},
+	},
+	"aws_caller_identity.current": {
+		"address":        "aws_caller_identity.current",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "data",
+		"module_address": "",
+		"name":           "current",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_caller_identity",
+		"values": {
+			"account_id": "123456789123",
+			"arn":        "arn:aws:iam::123456789123:user/terraform-test",
+			"id":         "123456789123",
+			"user_id":    "AIDAT7X67JOMQS4DRTZRE",
+		},
+	},
+	"aws_iam_policy_document.iam_policy_eks": {
+		"address":        "aws_iam_policy_document.iam_policy_eks",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "data",
+		"module_address": "",
+		"name":           "iam_policy_eks",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_iam_policy_document",
+		"values": {
+			"id":                        "189502314",
+			"json":                      "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"sts:AssumeRole\",\n      \"Principal\": {\n        \"Service\": \"eks.amazonaws.com\"\n      }\n    }\n  ]\n}",
+			"override_json":             null,
+			"override_policy_documents": null,
+			"policy_id":                 null,
+			"source_json":               null,
+			"source_policy_documents":   null,
+			"statement": [
+				{
+					"actions": [
+						"sts:AssumeRole",
+					],
+					"condition":      [],
+					"effect":         "Allow",
+					"not_actions":    [],
+					"not_principals": [],
+					"not_resources":  [],
+					"principals": [
+						{
+							"identifiers": [
+								"eks.amazonaws.com",
+							],
+							"type": "Service",
+						},
+					],
+					"resources": [],
+					"sid":       "",
+				},
+			],
+			"version": "2012-10-17",
+		},
+	},
+	"aws_iam_policy_document.policy": {
+		"address":        "aws_iam_policy_document.policy",
+		"depends_on":     [],
+		"deposed_key":    "",
+		"index":          null,
+		"mode":           "data",
+		"module_address": "",
+		"name":           "policy",
+		"provider_name":  "registry.terraform.io/hashicorp/aws",
+		"tainted":        false,
+		"type":           "aws_iam_policy_document",
+		"values": {
+			"id":                        "3931805674",
+			"json":                      "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"es:*\",\n      \"Resource\": \"*\",\n      \"Principal\": {\n        \"AWS\": \"*\"\n      }\n    }\n  ]\n}",
+			"override_json":             null,
+			"override_policy_documents": null,
+			"policy_id":                 null,
+			"source_json":               null,
+			"source_policy_documents":   null,
+			"statement": [
+				{
+					"actions": [
+						"es:*",
+					],
+					"condition":      [],
+					"effect":         "Allow",
+					"not_actions":    [],
+					"not_principals": [],
+					"not_resources":  [],
+					"principals": [
+						{
+							"identifiers": [
+								"*",
+							],
+							"type": "AWS",
+						},
+					],
+					"resources": [
+						"*",
+					],
+					"sid": "",
+				},
+			],
+			"version": "2012-10-17",
+		},
+	},
+}

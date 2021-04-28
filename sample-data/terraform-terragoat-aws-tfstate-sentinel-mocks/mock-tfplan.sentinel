@@ -1,0 +1,6639 @@
+import "strings"
+import "types"
+
+_modules = {
+	"root": {
+		"data": {},
+		"path": [],
+		"resources": {
+			"aws_db_instance": {
+				"default": {
+					0: {
+						"applied": {
+							"allocated_storage":               20,
+							"allow_major_version_upgrade":     null,
+							"apply_immediately":               true,
+							"auto_minor_version_upgrade":      true,
+							"backup_retention_period":         0,
+							"copy_tags_to_snapshot":           false,
+							"db_subnet_group_name":            "sg-123456789123-acme-dev",
+							"delete_automated_backups":        true,
+							"deletion_protection":             null,
+							"domain":                          null,
+							"domain_iam_role_name":            null,
+							"enabled_cloudwatch_logs_exports": null,
+							"engine":                              "mysql",
+							"engine_version":                      "8.0",
+							"final_snapshot_identifier":           null,
+							"iam_database_authentication_enabled": null,
+							"identifier":                          "rds-123456789123-acme-dev",
+							"instance_class":                      "db.t3.micro",
+							"iops":                                null,
+							"max_allocated_storage":               null,
+							"monitoring_interval":                 0,
+							"multi_az":                            false,
+							"name":                                "db1",
+							"option_group_name":                   "og-123456789123-acme-dev",
+							"parameter_group_name":                "pg-123456789123-acme-dev",
+							"password":                            "Aa1234321Bb",
+							"performance_insights_enabled":        false,
+							"publicly_accessible":                 true,
+							"replicate_source_db":                 null,
+							"restore_to_point_in_time":            [],
+							"s3_import":                           [],
+							"security_group_names":                null,
+							"skip_final_snapshot":                 true,
+							"storage_encrypted":                   false,
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-rds",
+							},
+							"timeouts": null,
+							"username": "admin",
+						},
+						"destroy": false,
+						"diff": {
+							"address": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"allocated_storage": {
+								"computed": false,
+								"new":      "20",
+								"old":      "",
+							},
+							"allow_major_version_upgrade": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"apply_immediately": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"auto_minor_version_upgrade": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"availability_zone": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"backup_retention_period": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"backup_window": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ca_cert_identifier": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"character_set_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"copy_tags_to_snapshot": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"db_subnet_group_name": {
+								"computed": false,
+								"new":      "sg-123456789123-acme-dev",
+								"old":      "",
+							},
+							"delete_automated_backups": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"deletion_protection": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"domain": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"domain_iam_role_name": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"enabled_cloudwatch_logs_exports": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"engine": {
+								"computed": false,
+								"new":      "mysql",
+								"old":      "",
+							},
+							"engine_version": {
+								"computed": false,
+								"new":      "8.0",
+								"old":      "",
+							},
+							"final_snapshot_identifier": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"hosted_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"iam_database_authentication_enabled": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"identifier": {
+								"computed": false,
+								"new":      "rds-123456789123-acme-dev",
+								"old":      "",
+							},
+							"identifier_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_class": {
+								"computed": false,
+								"new":      "db.t3.micro",
+								"old":      "",
+							},
+							"iops": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"latest_restorable_time": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"license_model": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"maintenance_window": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"max_allocated_storage": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"monitoring_interval": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"monitoring_role_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"multi_az": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "db1",
+								"old":      "",
+							},
+							"option_group_name": {
+								"computed": false,
+								"new":      "og-123456789123-acme-dev",
+								"old":      "",
+							},
+							"parameter_group_name": {
+								"computed": false,
+								"new":      "pg-123456789123-acme-dev",
+								"old":      "",
+							},
+							"password": {
+								"computed": false,
+								"new":      "Aa1234321Bb",
+								"old":      "",
+							},
+							"performance_insights_enabled": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"performance_insights_kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"performance_insights_retention_period": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"port": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"publicly_accessible": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"replicas.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replicate_source_db": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"resource_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"restore_to_point_in_time.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"s3_import.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"security_group_names": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"skip_final_snapshot": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"snapshot_identifier": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"storage_encrypted": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"storage_type": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-rds",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"timezone": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"username": {
+								"computed": false,
+								"new":      "admin",
+								"old":      "",
+							},
+							"vpc_security_group_ids.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_db_option_group": {
+				"default": {
+					0: {
+						"applied": {
+							"engine_name":              "mysql",
+							"major_engine_version":     "8.0",
+							"name":                     "og-123456789123-acme-dev",
+							"option":                   [],
+							"option_group_description": "Terraform OG",
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-og",
+							},
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"engine_name": {
+								"computed": false,
+								"new":      "mysql",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"major_engine_version": {
+								"computed": false,
+								"new":      "8.0",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "og-123456789123-acme-dev",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"option.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"option_group_description": {
+								"computed": false,
+								"new":      "Terraform OG",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-og",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_db_parameter_group": {
+				"default": {
+					0: {
+						"applied": {
+							"description": "Terraform PG",
+							"family":      "mysql8.0",
+							"name":        "pg-123456789123-acme-dev",
+							"parameter": [
+								{
+									"apply_method": "immediate",
+									"name":         "character_set_client",
+									"value":        "utf8",
+								},
+								{
+									"apply_method": "immediate",
+									"name":         "character_set_server",
+									"value":        "utf8",
+								},
+							],
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-pg",
+							},
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "Terraform PG",
+								"old":      "",
+							},
+							"family": {
+								"computed": false,
+								"new":      "mysql8.0",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "pg-123456789123-acme-dev",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"parameter.#": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"parameter.0.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"parameter.0.apply_method": {
+								"computed": false,
+								"new":      "immediate",
+								"old":      "",
+							},
+							"parameter.0.name": {
+								"computed": false,
+								"new":      "character_set_client",
+								"old":      "",
+							},
+							"parameter.0.value": {
+								"computed": false,
+								"new":      "utf8",
+								"old":      "",
+							},
+							"parameter.1.%": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"parameter.1.apply_method": {
+								"computed": false,
+								"new":      "immediate",
+								"old":      "",
+							},
+							"parameter.1.name": {
+								"computed": false,
+								"new":      "character_set_server",
+								"old":      "",
+							},
+							"parameter.1.value": {
+								"computed": false,
+								"new":      "utf8",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-pg",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_db_subnet_group": {
+				"default": {
+					0: {
+						"applied": {
+							"description": "Terraform DB Subnet Group",
+							"name":        "sg-123456789123-acme-dev",
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "sg-123456789123-acme-dev",
+							},
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "Terraform DB Subnet Group",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "sg-123456789123-acme-dev",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"subnet_ids.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "sg-123456789123-acme-dev",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_ebs_snapshot": {
+				"example_snapshot": {
+					0: {
+						"applied": {
+							"description": "123456789123-acme-dev-ebs-snapshot",
+							"tags": {
+								"Name": "123456789123-acme-dev-ebs-snapshot",
+							},
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"data_encryption_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-ebs-snapshot",
+								"old":      "",
+							},
+							"encrypted": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_alias": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-ebs-snapshot",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"volume_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"volume_size": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_ebs_volume": {
+				"web_host_storage": {
+					0: {
+						"applied": {
+							"availability_zone":    "us-west-2a",
+							"multi_attach_enabled": null,
+							"outpost_arn":          null,
+							"size":                 1,
+							"tags": {
+								"Name": "123456789123-acme-dev-ebs",
+							},
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"availability_zone": {
+								"computed": false,
+								"new":      "us-west-2a",
+								"old":      "",
+							},
+							"encrypted": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"iops": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"multi_attach_enabled": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"outpost_arn": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"size": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"snapshot_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-ebs",
+								"old":      "",
+							},
+							"throughput": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"type": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_ecr_repository": {
+				"repository": {
+					0: {
+						"applied": {
+							"encryption_configuration":     [],
+							"image_scanning_configuration": [],
+							"image_tag_mutability":         "MUTABLE",
+							"name":                         "123456789123-acme-dev-repository",
+							"tags": {
+								"Name": "123456789123-acme-dev-repository",
+							},
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"encryption_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"image_scanning_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"image_tag_mutability": {
+								"computed": false,
+								"new":      "MUTABLE",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-repository",
+								"old":      "",
+							},
+							"registry_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"repository_url": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-repository",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_eks_cluster": {
+				"eks_cluster": {
+					0: {
+						"applied": {
+							"enabled_cluster_log_types": null,
+							"encryption_config":         [],
+							"name":                      "123456789123-acme-dev-eks",
+							"tags":                      null,
+							"timeouts":                  null,
+							"vpc_config": [
+								{
+									"endpoint_private_access": true,
+									"endpoint_public_access":  true,
+									"security_group_ids":      null,
+								},
+							],
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"certificate_authority.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"created_at": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"enabled_cluster_log_types": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"encryption_config.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"identity.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"kubernetes_network_config.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-eks",
+								"old":      "",
+							},
+							"platform_version": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"role_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"version": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_config.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"vpc_config.0.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_config.0.cluster_security_group_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_config.0.endpoint_private_access": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"vpc_config.0.endpoint_public_access": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"vpc_config.0.public_access_cidrs": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_config.0.security_group_ids": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_config.0.subnet_ids": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_config.0.vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_elasticsearch_domain": {
+				"monitoring-framework": {
+					0: {
+						"applied": {
+							"cluster_config": [
+								{
+									"dedicated_master_count":   null,
+									"dedicated_master_enabled": false,
+									"dedicated_master_type":    null,
+									"instance_count":           1,
+									"instance_type":            "t2.small.elasticsearch",
+									"warm_count":               null,
+									"warm_enabled":             null,
+									"warm_type":                null,
+									"zone_awareness_config":    [],
+									"zone_awareness_enabled":   null,
+								},
+							],
+							"cognito_options": [],
+							"domain_name":     "tg-dev-es",
+							"ebs_options": [
+								{
+									"ebs_enabled": true,
+									"iops":        null,
+									"volume_size": 30,
+								},
+							],
+							"elasticsearch_version":  "2.3",
+							"log_publishing_options": [],
+							"snapshot_options":       [],
+							"tags":                   null,
+							"timeouts":               null,
+							"vpc_options":            [],
+						},
+						"destroy": false,
+						"diff": {
+							"access_policies": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"advanced_options.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"advanced_security_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster_config.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cluster_config.0.%": {
+								"computed": false,
+								"new":      "10",
+								"old":      "",
+							},
+							"cluster_config.0.dedicated_master_count": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster_config.0.dedicated_master_enabled": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"cluster_config.0.dedicated_master_type": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster_config.0.instance_count": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cluster_config.0.instance_type": {
+								"computed": false,
+								"new":      "t2.small.elasticsearch",
+								"old":      "",
+							},
+							"cluster_config.0.warm_count": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster_config.0.warm_enabled": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster_config.0.warm_type": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster_config.0.zone_awareness_config.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"cluster_config.0.zone_awareness_enabled": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"cognito_options.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"domain_endpoint_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"domain_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"domain_name": {
+								"computed": false,
+								"new":      "tg-dev-es",
+								"old":      "",
+							},
+							"ebs_options.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"ebs_options.0.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ebs_options.0.ebs_enabled": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"ebs_options.0.iops": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"ebs_options.0.volume_size": {
+								"computed": false,
+								"new":      "30",
+								"old":      "",
+							},
+							"ebs_options.0.volume_type": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"elasticsearch_version": {
+								"computed": false,
+								"new":      "2.3",
+								"old":      "",
+							},
+							"encrypt_at_rest.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"kibana_endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"log_publishing_options.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"node_to_node_encryption.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"snapshot_options.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_options.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_elasticsearch_domain_policy": {
+				"monitoring-framework-policy": {
+					0: {
+						"applied": {
+							"access_policies": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"es:*\",\n      \"Resource\": \"*\",\n      \"Principal\": {\n        \"AWS\": \"*\"\n      }\n    }\n  ]\n}",
+							"domain_name":     "tg-dev-es",
+						},
+						"destroy": false,
+						"diff": {
+							"access_policies": {
+								"computed": false,
+								"new":      "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"es:*\",\n      \"Resource\": \"*\",\n      \"Principal\": {\n        \"AWS\": \"*\"\n      }\n    }\n  ]\n}",
+								"old":      "",
+							},
+							"domain_name": {
+								"computed": false,
+								"new":      "tg-dev-es",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_elb": {
+				"weblb": {
+					0: {
+						"applied": {
+							"access_logs":                 [],
+							"connection_draining":         true,
+							"connection_draining_timeout": 400,
+							"cross_zone_load_balancing":   true,
+							"health_check": [
+								{
+									"healthy_threshold":   2,
+									"interval":            30,
+									"target":              "HTTP:8000/",
+									"timeout":             3,
+									"unhealthy_threshold": 2,
+								},
+							],
+							"idle_timeout": 400,
+							"listener": [
+								{
+									"instance_port":      8000,
+									"instance_protocol":  "http",
+									"lb_port":            80,
+									"lb_protocol":        "http",
+									"ssl_certificate_id": "",
+								},
+							],
+							"name":        "weblb-terraform-elb",
+							"name_prefix": null,
+							"tags": {
+								"Name": "foobar-terraform-elb",
+							},
+						},
+						"destroy": false,
+						"diff": {
+							"access_logs.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"availability_zones.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"connection_draining": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"connection_draining_timeout": {
+								"computed": false,
+								"new":      "400",
+								"old":      "",
+							},
+							"cross_zone_load_balancing": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"dns_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"health_check.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"health_check.0.%": {
+								"computed": false,
+								"new":      "5",
+								"old":      "",
+							},
+							"health_check.0.healthy_threshold": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"health_check.0.interval": {
+								"computed": false,
+								"new":      "30",
+								"old":      "",
+							},
+							"health_check.0.target": {
+								"computed": false,
+								"new":      "HTTP:8000/",
+								"old":      "",
+							},
+							"health_check.0.timeout": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"health_check.0.unhealthy_threshold": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"idle_timeout": {
+								"computed": false,
+								"new":      "400",
+								"old":      "",
+							},
+							"instances.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"internal": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"listener.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"listener.0.%": {
+								"computed": false,
+								"new":      "5",
+								"old":      "",
+							},
+							"listener.0.instance_port": {
+								"computed": false,
+								"new":      "8000",
+								"old":      "",
+							},
+							"listener.0.instance_protocol": {
+								"computed": false,
+								"new":      "http",
+								"old":      "",
+							},
+							"listener.0.lb_port": {
+								"computed": false,
+								"new":      "80",
+								"old":      "",
+							},
+							"listener.0.lb_protocol": {
+								"computed": false,
+								"new":      "http",
+								"old":      "",
+							},
+							"listener.0.ssl_certificate_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "weblb-terraform-elb",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"security_groups.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"source_security_group": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"source_security_group_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"subnets.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "foobar-terraform-elb",
+								"old":      "",
+							},
+							"zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_flow_log": {
+				"vpcflowlogs": {
+					0: {
+						"applied": {
+							"eni_id":                   null,
+							"iam_role_arn":             null,
+							"log_destination_type":     "s3",
+							"max_aggregation_interval": 600,
+							"subnet_id":                null,
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-flowlogs",
+							},
+							"traffic_type": "ALL",
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"eni_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"iam_role_arn": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"log_destination": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"log_destination_type": {
+								"computed": false,
+								"new":      "s3",
+								"old":      "",
+							},
+							"log_format": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"log_group_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"max_aggregation_interval": {
+								"computed": false,
+								"new":      "600",
+								"old":      "",
+							},
+							"subnet_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-flowlogs",
+								"old":      "",
+							},
+							"traffic_type": {
+								"computed": false,
+								"new":      "ALL",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_iam_access_key": {
+				"user": {
+					0: {
+						"applied": {
+							"pgp_key": null,
+							"user":    "123456789123-acme-dev-user",
+						},
+						"destroy": false,
+						"diff": {
+							"create_date": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"encrypted_secret": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"key_fingerprint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"pgp_key": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"secret": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ses_smtp_password_v4": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"user": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-user",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_iam_instance_profile": {
+				"ec2profile": {
+					0: {
+						"applied": {
+							"name":        "123456789123-acme-dev-profile",
+							"name_prefix": null,
+							"path":        "/",
+							"role":        "123456789123-acme-dev-role",
+							"tags":        null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"create_date": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-profile",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"path": {
+								"computed": false,
+								"new":      "/",
+								"old":      "",
+							},
+							"role": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-role",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"unique_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_iam_role": {
+				"ec2role": {
+					0: {
+						"applied": {
+							"assume_role_policy":    "{\n    \"Version\": \"2012-10-17\",\n    \"Statement\": [\n        {\n            \"Action\": \"sts:AssumeRole\",\n            \"Principal\": {\n               \"Service\": \"ec2.amazonaws.com\"\n            },\n            \"Effect\": \"Allow\",\n            \"Sid\": \"\"\n        }\n    ]\n}\n",
+							"description":           null,
+							"force_detach_policies": false,
+							"max_session_duration":  3600,
+							"name":                  "123456789123-acme-dev-role",
+							"name_prefix":           null,
+							"path":                  "/",
+							"permissions_boundary":  null,
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-role",
+							},
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"assume_role_policy": {
+								"computed": false,
+								"new":      "{\n    \"Version\": \"2012-10-17\",\n    \"Statement\": [\n        {\n            \"Action\": \"sts:AssumeRole\",\n            \"Principal\": {\n               \"Service\": \"ec2.amazonaws.com\"\n            },\n            \"Effect\": \"Allow\",\n            \"Sid\": \"\"\n        }\n    ]\n}\n",
+								"old":      "",
+							},
+							"create_date": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"force_detach_policies": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"inline_policy.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"managed_policy_arns.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"max_session_duration": {
+								"computed": false,
+								"new":      "3600",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-role",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"path": {
+								"computed": false,
+								"new":      "/",
+								"old":      "",
+							},
+							"permissions_boundary": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-role",
+								"old":      "",
+							},
+							"unique_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"iam_for_eks": {
+					0: {
+						"applied": {
+							"assume_role_policy":    "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"sts:AssumeRole\",\n      \"Principal\": {\n        \"Service\": \"eks.amazonaws.com\"\n      }\n    }\n  ]\n}",
+							"description":           null,
+							"force_detach_policies": false,
+							"max_session_duration":  3600,
+							"name":                  "123456789123-acme-dev-iam-for-eks",
+							"name_prefix":           null,
+							"path":                  "/",
+							"permissions_boundary":  null,
+							"tags":                  null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"assume_role_policy": {
+								"computed": false,
+								"new":      "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"sts:AssumeRole\",\n      \"Principal\": {\n        \"Service\": \"eks.amazonaws.com\"\n      }\n    }\n  ]\n}",
+								"old":      "",
+							},
+							"create_date": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"force_detach_policies": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"inline_policy.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"managed_policy_arns.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"max_session_duration": {
+								"computed": false,
+								"new":      "3600",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-iam-for-eks",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"path": {
+								"computed": false,
+								"new":      "/",
+								"old":      "",
+							},
+							"permissions_boundary": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"unique_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"iam_for_lambda": {
+					0: {
+						"applied": {
+							"assume_role_policy":    "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Action\": \"sts:AssumeRole\",\n      \"Principal\": {\n        \"Service\": \"lambda.amazonaws.com\"\n      },\n      \"Effect\": \"Allow\",\n      \"Sid\": \"\"\n    }\n  ]\n}\n",
+							"description":           null,
+							"force_detach_policies": false,
+							"max_session_duration":  3600,
+							"name":                  "123456789123-acme-dev-analysis-lambda",
+							"name_prefix":           null,
+							"path":                  "/",
+							"permissions_boundary":  null,
+							"tags":                  null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"assume_role_policy": {
+								"computed": false,
+								"new":      "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Action\": \"sts:AssumeRole\",\n      \"Principal\": {\n        \"Service\": \"lambda.amazonaws.com\"\n      },\n      \"Effect\": \"Allow\",\n      \"Sid\": \"\"\n    }\n  ]\n}\n",
+								"old":      "",
+							},
+							"create_date": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"force_detach_policies": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"inline_policy.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"managed_policy_arns.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"max_session_duration": {
+								"computed": false,
+								"new":      "3600",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-analysis-lambda",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"path": {
+								"computed": false,
+								"new":      "/",
+								"old":      "",
+							},
+							"permissions_boundary": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"unique_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_iam_role_policy": {
+				"ec2policy": {
+					0: {
+						"applied": {
+							"name":        "123456789123-acme-dev-policy",
+							"name_prefix": null,
+							"policy":      "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Action\": [\n        \"s3:*\",\n        \"ec2:*\",\n        \"rds:*\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": \"*\"\n    }\n  ]\n}\n",
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-policy",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"policy": {
+								"computed": false,
+								"new":      "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Action\": [\n        \"s3:*\",\n        \"ec2:*\",\n        \"rds:*\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": \"*\"\n    }\n  ]\n}\n",
+								"old":      "",
+							},
+							"role": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_iam_role_policy_attachment": {
+				"policy_attachment-AmazonEKSClusterPolicy": {
+					0: {
+						"applied": {
+							"policy_arn": "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+							"role":       "123456789123-acme-dev-iam-for-eks",
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"policy_arn": {
+								"computed": false,
+								"new":      "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+								"old":      "",
+							},
+							"role": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-iam-for-eks",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"policy_attachment-AmazonEKSServicePolicy": {
+					0: {
+						"applied": {
+							"policy_arn": "arn:aws:iam::aws:policy/AmazonEKSServicePolicy",
+							"role":       "123456789123-acme-dev-iam-for-eks",
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"policy_arn": {
+								"computed": false,
+								"new":      "arn:aws:iam::aws:policy/AmazonEKSServicePolicy",
+								"old":      "",
+							},
+							"role": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-iam-for-eks",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_iam_user": {
+				"user": {
+					0: {
+						"applied": {
+							"force_destroy":        true,
+							"name":                 "123456789123-acme-dev-user",
+							"path":                 "/",
+							"permissions_boundary": null,
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-user",
+							},
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"force_destroy": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-user",
+								"old":      "",
+							},
+							"path": {
+								"computed": false,
+								"new":      "/",
+								"old":      "",
+							},
+							"permissions_boundary": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-user",
+								"old":      "",
+							},
+							"unique_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_iam_user_policy": {
+				"userpolicy": {
+					0: {
+						"applied": {
+							"name":        "excess_policy",
+							"name_prefix": null,
+							"policy":      "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Action\": [\n        \"ec2:*\",\n        \"s3:*\",\n        \"lambda:*\",\n        \"cloudwatch:*\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": \"*\"\n    }\n  ]\n}\n",
+							"user":        "123456789123-acme-dev-user",
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "excess_policy",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"policy": {
+								"computed": false,
+								"new":      "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Action\": [\n        \"ec2:*\",\n        \"s3:*\",\n        \"lambda:*\",\n        \"cloudwatch:*\"\n      ],\n      \"Effect\": \"Allow\",\n      \"Resource\": \"*\"\n    }\n  ]\n}\n",
+								"old":      "",
+							},
+							"user": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-user",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_instance": {
+				"db_app": {
+					0: {
+						"applied": {
+							"ami": "ami-06d584c1805ad64fb",
+							"credit_specification":                 [],
+							"disable_api_termination":              null,
+							"ebs_optimized":                        null,
+							"get_password_data":                    false,
+							"hibernation":                          null,
+							"iam_instance_profile":                 "123456789123-acme-dev-profile",
+							"instance_initiated_shutdown_behavior": null,
+							"instance_type":                        "t2.nano",
+							"monitoring":                           null,
+							"source_dest_check":                    true,
+							"tags": {
+								"Name": "123456789123-acme-dev-dbapp",
+							},
+							"timeouts":         null,
+							"user_data_base64": null,
+							"volume_tags":      null,
+						},
+						"destroy": false,
+						"diff": {
+							"ami": {
+								"computed": false,
+								"new":      "ami-06d584c1805ad64fb",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"associate_public_ip_address": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"availability_zone": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cpu_core_count": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cpu_threads_per_core": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"credit_specification.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"disable_api_termination": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"ebs_block_device.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ebs_optimized": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"enclave_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ephemeral_block_device.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"get_password_data": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"hibernation": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"host_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"iam_instance_profile": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-profile",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_initiated_shutdown_behavior": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_state": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_type": {
+								"computed": false,
+								"new":      "t2.nano",
+								"old":      "",
+							},
+							"ipv6_address_count": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_addresses.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"key_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"metadata_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"monitoring": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"network_interface.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"outpost_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"password_data": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"placement_group": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"primary_network_interface_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"private_dns": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"private_ip": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"public_dns": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"public_ip": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"root_block_device.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"secondary_private_ips.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"security_groups.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"source_dest_check": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"subnet_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-dbapp",
+								"old":      "",
+							},
+							"tenancy": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"user_data": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"user_data_base64": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"volume_tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_security_group_ids.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"web_host": {
+					0: {
+						"applied": {
+							"ami": "ami-09a5b0b7edf08843d",
+							"credit_specification":                 [],
+							"disable_api_termination":              null,
+							"ebs_optimized":                        null,
+							"get_password_data":                    false,
+							"hibernation":                          null,
+							"iam_instance_profile":                 null,
+							"instance_initiated_shutdown_behavior": null,
+							"instance_type":                        "t2.nano",
+							"monitoring":                           null,
+							"source_dest_check":                    true,
+							"tags": {
+								"Name": "123456789123-acme-dev-ec2",
+							},
+							"timeouts":         null,
+							"user_data":        "44c6c808e6449ee36dfcfc4ebd66c1b9634b40f2",
+							"user_data_base64": null,
+							"volume_tags":      null,
+						},
+						"destroy": false,
+						"diff": {
+							"ami": {
+								"computed": false,
+								"new":      "ami-09a5b0b7edf08843d",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"associate_public_ip_address": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"availability_zone": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cpu_core_count": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cpu_threads_per_core": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"credit_specification.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"disable_api_termination": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"ebs_block_device.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ebs_optimized": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"enclave_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ephemeral_block_device.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"get_password_data": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"hibernation": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"host_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"iam_instance_profile": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_initiated_shutdown_behavior": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_state": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_type": {
+								"computed": false,
+								"new":      "t2.nano",
+								"old":      "",
+							},
+							"ipv6_address_count": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_addresses.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"key_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"metadata_options.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"monitoring": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"network_interface.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"outpost_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"password_data": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"placement_group": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"primary_network_interface_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"private_dns": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"private_ip": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"public_dns": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"public_ip": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"root_block_device.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"secondary_private_ips.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"security_groups.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"source_dest_check": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"subnet_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-ec2",
+								"old":      "",
+							},
+							"tenancy": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"user_data": {
+								"computed": false,
+								"new":      "44c6c808e6449ee36dfcfc4ebd66c1b9634b40f2",
+								"old":      "",
+							},
+							"user_data_base64": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"volume_tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_security_group_ids.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_internet_gateway": {
+				"web_igw": {
+					0: {
+						"applied": {
+							"tags": {
+								"Name": "123456789123-acme-dev-igw",
+							},
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-igw",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_kms_alias": {
+				"logs_key_alias": {
+					0: {
+						"applied": {
+							"name":        "alias/123456789123-acme-dev-logs-bucket-key",
+							"name_prefix": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "alias/123456789123-acme-dev-logs-bucket-key",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"target_key_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"target_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_kms_key": {
+				"logs_key": {
+					0: {
+						"applied": {
+							"customer_master_key_spec": "SYMMETRIC_DEFAULT",
+							"deletion_window_in_days":  7,
+							"description":              "123456789123-acme-dev-logs bucket key",
+							"enable_key_rotation":      false,
+							"is_enabled":               true,
+							"key_usage":                "ENCRYPT_DECRYPT",
+							"tags":                     null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"customer_master_key_spec": {
+								"computed": false,
+								"new":      "SYMMETRIC_DEFAULT",
+								"old":      "",
+							},
+							"deletion_window_in_days": {
+								"computed": false,
+								"new":      "7",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-logs bucket key",
+								"old":      "",
+							},
+							"enable_key_rotation": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"is_enabled": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"key_usage": {
+								"computed": false,
+								"new":      "ENCRYPT_DECRYPT",
+								"old":      "",
+							},
+							"policy": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_lambda_function": {
+				"analysis_lambda": {
+					0: {
+						"applied": {
+							"code_signing_config_arn": null,
+							"dead_letter_config":      [],
+							"description":             null,
+							"environment": [
+								{
+									"variables": {
+										"access_key": "{{REDACTED}}",
+										"secret_key": "{{REDACTED}}",
+									},
+								},
+							],
+							"file_system_config":             [],
+							"filename":                       "resources/lambda_function_payload.zip",
+							"function_name":                  "123456789123-acme-dev-analysis",
+							"handler":                        "exports.test",
+							"image_config":                   [],
+							"image_uri":                      null,
+							"kms_key_arn":                    null,
+							"layers":                         null,
+							"memory_size":                    128,
+							"package_type":                   "Zip",
+							"publish":                        false,
+							"reserved_concurrent_executions": -1,
+							"runtime":                        "nodejs12.x",
+							"s3_bucket":                      null,
+							"s3_key":                         null,
+							"s3_object_version":              null,
+							"source_code_hash":               "Fne61Y/F2pmVywaVqIYcztFMK3LNeMJKpWFNnxDdGTw=",
+							"tags":                           null,
+							"timeout":                        3,
+							"timeouts":                       null,
+							"vpc_config":                     [],
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"code_signing_config_arn": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"dead_letter_config.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"environment.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"environment.0.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"environment.0.variables.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"environment.0.variables.access_key": {
+								"computed": false,
+								"new":      "{{REDACTED}}",
+								"old":      "",
+							},
+							"environment.0.variables.secret_key": {
+								"computed": false,
+								"new":      "{{REDACTED}}",
+								"old":      "",
+							},
+							"file_system_config.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"filename": {
+								"computed": false,
+								"new":      "resources/lambda_function_payload.zip",
+								"old":      "",
+							},
+							"function_name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-analysis",
+								"old":      "",
+							},
+							"handler": {
+								"computed": false,
+								"new":      "exports.test",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"image_config.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"image_uri": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"invoke_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"kms_key_arn": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"last_modified": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"layers": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"memory_size": {
+								"computed": false,
+								"new":      "128",
+								"old":      "",
+							},
+							"package_type": {
+								"computed": false,
+								"new":      "Zip",
+								"old":      "",
+							},
+							"publish": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"qualified_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"reserved_concurrent_executions": {
+								"computed": false,
+								"new":      "-1",
+								"old":      "",
+							},
+							"role": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"runtime": {
+								"computed": false,
+								"new":      "nodejs12.x",
+								"old":      "",
+							},
+							"s3_bucket": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"s3_key": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"s3_object_version": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"signing_job_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"signing_profile_version_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"source_code_hash": {
+								"computed": false,
+								"new":      "Fne61Y/F2pmVywaVqIYcztFMK3LNeMJKpWFNnxDdGTw=",
+								"old":      "",
+							},
+							"source_code_size": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"timeout": {
+								"computed": false,
+								"new":      "3",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tracing_config.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"version": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_config.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_neptune_cluster": {
+				"default": {
+					0: {
+						"applied": {
+							"apply_immediately":              true,
+							"backup_retention_period":        5,
+							"cluster_identifier":             "neptunedb1",
+							"deletion_protection":            null,
+							"enable_cloudwatch_logs_exports": null,
+							"engine":                               "neptune",
+							"final_snapshot_identifier":            null,
+							"iam_database_authentication_enabled":  false,
+							"iam_roles":                            null,
+							"neptune_cluster_parameter_group_name": "default.neptune1",
+							"port": 8182,
+							"preferred_backup_window":       "07:00-09:00",
+							"replication_source_identifier": null,
+							"skip_final_snapshot":           true,
+							"snapshot_identifier":           null,
+							"storage_encrypted":             false,
+							"tags":                          null,
+							"timeouts":                      null,
+						},
+						"destroy": false,
+						"diff": {
+							"apply_immediately": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"availability_zones.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"backup_retention_period": {
+								"computed": false,
+								"new":      "5",
+								"old":      "",
+							},
+							"cluster_identifier": {
+								"computed": false,
+								"new":      "neptunedb1",
+								"old":      "",
+							},
+							"cluster_identifier_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster_members.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster_resource_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"deletion_protection": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"enable_cloudwatch_logs_exports": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"engine": {
+								"computed": false,
+								"new":      "neptune",
+								"old":      "",
+							},
+							"engine_version": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"final_snapshot_identifier": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"hosted_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"iam_database_authentication_enabled": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"iam_roles": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"kms_key_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"neptune_cluster_parameter_group_name": {
+								"computed": false,
+								"new":      "default.neptune1",
+								"old":      "",
+							},
+							"neptune_subnet_group_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"port": {
+								"computed": false,
+								"new":      "8182",
+								"old":      "",
+							},
+							"preferred_backup_window": {
+								"computed": false,
+								"new":      "07:00-09:00",
+								"old":      "",
+							},
+							"preferred_maintenance_window": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"reader_endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replication_source_identifier": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"skip_final_snapshot": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"snapshot_identifier": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"storage_encrypted": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_security_group_ids.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_neptune_cluster_instance": {
+				"default": {
+					0: {
+						"applied": {
+							"apply_immediately":            true,
+							"auto_minor_version_upgrade":   true,
+							"engine":                       "neptune",
+							"instance_class":               "db.t3.medium",
+							"neptune_parameter_group_name": "default.neptune1",
+							"port":                8182,
+							"promotion_tier":      0,
+							"publicly_accessible": false,
+							"tags":                null,
+							"timeouts":            null,
+						},
+						"destroy": false,
+						"diff": {
+							"address": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"apply_immediately": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"auto_minor_version_upgrade": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"availability_zone": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cluster_identifier": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"dbi_resource_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"engine": {
+								"computed": false,
+								"new":      "neptune",
+								"old":      "",
+							},
+							"engine_version": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"identifier": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"identifier_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_class": {
+								"computed": false,
+								"new":      "db.t3.medium",
+								"old":      "",
+							},
+							"kms_key_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"neptune_parameter_group_name": {
+								"computed": false,
+								"new":      "default.neptune1",
+								"old":      "",
+							},
+							"neptune_subnet_group_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"port": {
+								"computed": false,
+								"new":      "8182",
+								"old":      "",
+							},
+							"preferred_backup_window": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"preferred_maintenance_window": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"promotion_tier": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"publicly_accessible": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"storage_encrypted": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"writer": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_neptune_cluster_snapshot": {
+				"default": {
+					0: {
+						"applied": {
+							"db_cluster_snapshot_identifier": "resourcetestsnapshot1",
+							"timeouts":                       null,
+						},
+						"destroy": false,
+						"diff": {
+							"allocated_storage": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"availability_zones.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"db_cluster_identifier": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"db_cluster_snapshot_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"db_cluster_snapshot_identifier": {
+								"computed": false,
+								"new":      "resourcetestsnapshot1",
+								"old":      "",
+							},
+							"engine": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"engine_version": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"license_model": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"port": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"snapshot_type": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"source_db_cluster_snapshot_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"storage_encrypted": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_network_interface": {
+				"web-eni": {
+					0: {
+						"applied": {
+							"description": null,
+							"private_ips": [
+								"172.16.10.100",
+							],
+							"source_dest_check": true,
+							"tags": {
+								"Name": "123456789123-acme-dev-primary_network_interface",
+							},
+						},
+						"destroy": false,
+						"diff": {
+							"attachment.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_address_count": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_addresses.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"mac_address": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"outpost_arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"private_dns_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"private_ip": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"private_ips.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"private_ips.0": {
+								"computed": false,
+								"new":      "172.16.10.100",
+								"old":      "",
+							},
+							"private_ips_count": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"security_groups.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"source_dest_check": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"subnet_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-primary_network_interface",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_route": {
+				"public_internet_gateway": {
+					0: {
+						"applied": {
+							"carrier_gateway_id":          null,
+							"destination_cidr_block":      "0.0.0.0/0",
+							"destination_ipv6_cidr_block": null,
+							"destination_prefix_list_id":  null,
+							"egress_only_gateway_id":      null,
+							"local_gateway_id":            null,
+							"nat_gateway_id":              null,
+							"timeouts": {
+								"create": "5m",
+								"delete": null,
+							},
+							"transit_gateway_id":        null,
+							"vpc_endpoint_id":           null,
+							"vpc_peering_connection_id": null,
+						},
+						"destroy": false,
+						"diff": {
+							"carrier_gateway_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"destination_cidr_block": {
+								"computed": false,
+								"new":      "0.0.0.0/0",
+								"old":      "",
+							},
+							"destination_ipv6_cidr_block": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"destination_prefix_list_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"egress_only_gateway_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"gateway_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"local_gateway_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"nat_gateway_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"network_interface_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"origin": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"route_table_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"state": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"timeouts.create": {
+								"computed": false,
+								"new":      "5m",
+								"old":      "",
+							},
+							"timeouts.delete": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"transit_gateway_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_endpoint_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_peering_connection_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_route_table": {
+				"web_rtb": {
+					0: {
+						"applied": {
+							"tags": {
+								"Name": "123456789123-acme-dev-rtb",
+							},
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"propagating_vgws.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"route.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-rtb",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_route_table_association": {
+				"rtbassoc": {
+					0: {
+						"applied": {
+							"gateway_id": null,
+						},
+						"destroy": false,
+						"diff": {
+							"gateway_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"route_table_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"subnet_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"rtbassoc2": {
+					0: {
+						"applied": {
+							"gateway_id": null,
+						},
+						"destroy": false,
+						"diff": {
+							"gateway_id": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"route_table_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"subnet_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket": {
+				"data": {
+					0: {
+						"applied": {
+							"acl":                                  "public-read",
+							"bucket":                               "123456789123-acme-dev-data",
+							"bucket_prefix":                        null,
+							"cors_rule":                            [],
+							"force_destroy":                        true,
+							"grant":                                [],
+							"lifecycle_rule":                       [],
+							"logging":                              [],
+							"object_lock_configuration":            [],
+							"policy":                               null,
+							"replication_configuration":            [],
+							"server_side_encryption_configuration": [],
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-data",
+							},
+							"website": [],
+						},
+						"destroy": false,
+						"diff": {
+							"acceleration_status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"acl": {
+								"computed": false,
+								"new":      "public-read",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-data",
+								"old":      "",
+							},
+							"bucket_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_regional_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cors_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"force_destroy": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"grant.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"hosted_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"logging.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"object_lock_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"policy": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"region": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replication_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"request_payer": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-data",
+								"old":      "",
+							},
+							"versioning.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"website_domain": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website_endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"data_science": {
+					0: {
+						"applied": {
+							"acl":            "private",
+							"bucket":         "123456789123-acme-dev-data-science",
+							"bucket_prefix":  null,
+							"cors_rule":      [],
+							"force_destroy":  true,
+							"grant":          [],
+							"lifecycle_rule": [],
+							"logging": [
+								{
+									"target_prefix": "log/",
+								},
+							],
+							"object_lock_configuration":            [],
+							"policy":                               null,
+							"replication_configuration":            [],
+							"server_side_encryption_configuration": [],
+							"tags": null,
+							"versioning": [
+								{
+									"enabled":    true,
+									"mfa_delete": false,
+								},
+							],
+							"website": [],
+						},
+						"destroy": false,
+						"diff": {
+							"acceleration_status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"acl": {
+								"computed": false,
+								"new":      "private",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-data-science",
+								"old":      "",
+							},
+							"bucket_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_regional_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cors_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"force_destroy": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"grant.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"hosted_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"logging.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"logging.0.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"logging.0.target_bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"logging.0.target_prefix": {
+								"computed": false,
+								"new":      "log/",
+								"old":      "",
+							},
+							"object_lock_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"policy": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"region": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replication_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"request_payer": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"versioning.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"versioning.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"versioning.0.enabled": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"versioning.0.mfa_delete": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"website.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"website_domain": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website_endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"financials": {
+					0: {
+						"applied": {
+							"acl":                                  "private",
+							"bucket":                               "123456789123-acme-dev-financials",
+							"bucket_prefix":                        null,
+							"cors_rule":                            [],
+							"force_destroy":                        true,
+							"grant":                                [],
+							"lifecycle_rule":                       [],
+							"logging":                              [],
+							"object_lock_configuration":            [],
+							"policy":                               null,
+							"replication_configuration":            [],
+							"server_side_encryption_configuration": [],
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-financials",
+							},
+							"website": [],
+						},
+						"destroy": false,
+						"diff": {
+							"acceleration_status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"acl": {
+								"computed": false,
+								"new":      "private",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-financials",
+								"old":      "",
+							},
+							"bucket_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_regional_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cors_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"force_destroy": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"grant.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"hosted_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"logging.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"object_lock_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"policy": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"region": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replication_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"request_payer": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-financials",
+								"old":      "",
+							},
+							"versioning.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"website_domain": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website_endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"flowbucket": {
+					0: {
+						"applied": {
+							"acl":                                  "private",
+							"bucket":                               "123456789123-acme-dev-flowlogs",
+							"bucket_prefix":                        null,
+							"cors_rule":                            [],
+							"force_destroy":                        true,
+							"grant":                                [],
+							"lifecycle_rule":                       [],
+							"logging":                              [],
+							"object_lock_configuration":            [],
+							"policy":                               null,
+							"replication_configuration":            [],
+							"server_side_encryption_configuration": [],
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-flowlogs",
+							},
+							"website": [],
+						},
+						"destroy": false,
+						"diff": {
+							"acceleration_status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"acl": {
+								"computed": false,
+								"new":      "private",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-flowlogs",
+								"old":      "",
+							},
+							"bucket_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_regional_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cors_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"force_destroy": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"grant.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"hosted_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"logging.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"object_lock_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"policy": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"region": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replication_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"request_payer": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-flowlogs",
+								"old":      "",
+							},
+							"versioning.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"website_domain": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website_endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"logs": {
+					0: {
+						"applied": {
+							"acl":                       "log-delivery-write",
+							"bucket":                    "123456789123-acme-dev-logs",
+							"bucket_prefix":             null,
+							"cors_rule":                 [],
+							"force_destroy":             true,
+							"grant":                     [],
+							"lifecycle_rule":            [],
+							"logging":                   [],
+							"object_lock_configuration": [],
+							"policy":                    null,
+							"replication_configuration": [],
+							"server_side_encryption_configuration": [
+								{
+									"rule": [
+										{
+											"apply_server_side_encryption_by_default": [
+												{
+													"sse_algorithm": "aws:kms",
+												},
+											],
+											"bucket_key_enabled": null,
+										},
+									],
+								},
+							],
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-logs",
+							},
+							"versioning": [
+								{
+									"enabled":    true,
+									"mfa_delete": false,
+								},
+							],
+							"website": [],
+						},
+						"destroy": false,
+						"diff": {
+							"acceleration_status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"acl": {
+								"computed": false,
+								"new":      "log-delivery-write",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-logs",
+								"old":      "",
+							},
+							"bucket_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_regional_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cors_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"force_destroy": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"grant.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"hosted_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"logging.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"object_lock_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"policy": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"region": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replication_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"request_payer": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.0.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.0.rule.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.0.rule.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.0.rule.0.apply_server_side_encryption_by_default.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.0.rule.0.apply_server_side_encryption_by_default.0.%": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.0.rule.0.apply_server_side_encryption_by_default.0.kms_master_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.0.rule.0.apply_server_side_encryption_by_default.0.sse_algorithm": {
+								"computed": false,
+								"new":      "aws:kms",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.0.rule.0.bucket_key_enabled": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-logs",
+								"old":      "",
+							},
+							"versioning.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"versioning.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"versioning.0.enabled": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"versioning.0.mfa_delete": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"website.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"website_domain": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website_endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"operations": {
+					0: {
+						"applied": {
+							"acl":                                  "private",
+							"bucket":                               "123456789123-acme-dev-operations",
+							"bucket_prefix":                        null,
+							"cors_rule":                            [],
+							"force_destroy":                        true,
+							"grant":                                [],
+							"lifecycle_rule":                       [],
+							"logging":                              [],
+							"object_lock_configuration":            [],
+							"policy":                               null,
+							"replication_configuration":            [],
+							"server_side_encryption_configuration": [],
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-operations",
+							},
+							"versioning": [
+								{
+									"enabled":    true,
+									"mfa_delete": false,
+								},
+							],
+							"website": [],
+						},
+						"destroy": false,
+						"diff": {
+							"acceleration_status": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"acl": {
+								"computed": false,
+								"new":      "private",
+								"old":      "",
+							},
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-operations",
+								"old":      "",
+							},
+							"bucket_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_prefix": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_regional_domain_name": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cors_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"force_destroy": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"grant.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"hosted_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"lifecycle_rule.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"logging.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"object_lock_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"policy": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"region": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"replication_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"request_payer": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"server_side_encryption_configuration.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-operations",
+								"old":      "",
+							},
+							"versioning.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"versioning.0.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"versioning.0.enabled": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"versioning.0.mfa_delete": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"website.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"website_domain": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website_endpoint": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_s3_bucket_object": {
+				"data_object": {
+					0: {
+						"applied": {
+							"acl":                           "private",
+							"cache_control":                 null,
+							"content":                       null,
+							"content_base64":                null,
+							"content_disposition":           null,
+							"content_encoding":              null,
+							"content_language":              null,
+							"force_destroy":                 false,
+							"key":                           "customer-master.xlsx",
+							"metadata":                      null,
+							"object_lock_legal_hold_status": null,
+							"object_lock_mode":              null,
+							"object_lock_retain_until_date": null,
+							"source":                        "resources/customer-master.xlsx",
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-customer-master",
+							},
+							"website_redirect": null,
+						},
+						"destroy": false,
+						"diff": {
+							"acl": {
+								"computed": false,
+								"new":      "private",
+								"old":      "",
+							},
+							"bucket": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"bucket_key_enabled": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cache_control": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"content": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"content_base64": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"content_disposition": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"content_encoding": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"content_language": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"content_type": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"etag": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"force_destroy": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"key": {
+								"computed": false,
+								"new":      "customer-master.xlsx",
+								"old":      "",
+							},
+							"kms_key_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"metadata": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"object_lock_legal_hold_status": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"object_lock_mode": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"object_lock_retain_until_date": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"server_side_encryption": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"source": {
+								"computed": false,
+								"new":      "resources/customer-master.xlsx",
+								"old":      "",
+							},
+							"storage_class": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-customer-master",
+								"old":      "",
+							},
+							"version_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"website_redirect": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_security_group": {
+				"default": {
+					0: {
+						"applied": {
+							"description": "Managed by Terraform",
+							"name":        "123456789123-acme-dev-rds-sg",
+							"revoke_rules_on_delete": false,
+							"tags": {
+								"Environment": "123456789123-acme-dev",
+								"Name":        "123456789123-acme-dev-rds-sg",
+							},
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "Managed by Terraform",
+								"old":      "",
+							},
+							"egress.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ingress.#": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-rds-sg",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"revoke_rules_on_delete": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Environment": {
+								"computed": false,
+								"new":      "123456789123-acme-dev",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-rds-sg",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"web-node": {
+					0: {
+						"applied": {
+							"description": "123456789123-acme-dev Security Group",
+							"egress": [
+								{
+									"cidr_blocks": [
+										"0.0.0.0/0",
+									],
+									"description":      "",
+									"from_port":        0,
+									"ipv6_cidr_blocks": [],
+									"prefix_list_ids":  [],
+									"protocol":         "-1",
+									"security_groups":  [],
+									"self":             false,
+									"to_port":          0,
+								},
+							],
+							"ingress": [
+								{
+									"cidr_blocks": [
+										"0.0.0.0/0",
+									],
+									"description":      "",
+									"from_port":        22,
+									"ipv6_cidr_blocks": [],
+									"prefix_list_ids":  [],
+									"protocol":         "tcp",
+									"security_groups":  [],
+									"self":             false,
+									"to_port":          22,
+								},
+								{
+									"cidr_blocks": [
+										"0.0.0.0/0",
+									],
+									"description":      "",
+									"from_port":        80,
+									"ipv6_cidr_blocks": [],
+									"prefix_list_ids":  [],
+									"protocol":         "tcp",
+									"security_groups":  [],
+									"self":             false,
+									"to_port":          80,
+								},
+							],
+							"name": "123456789123-acme-dev-sg",
+							"revoke_rules_on_delete": false,
+							"tags":     null,
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "123456789123-acme-dev Security Group",
+								"old":      "",
+							},
+							"egress.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"egress.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"egress.0.cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"egress.0.cidr_blocks.0": {
+								"computed": false,
+								"new":      "0.0.0.0/0",
+								"old":      "",
+							},
+							"egress.0.description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"egress.0.from_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"egress.0.ipv6_cidr_blocks.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"egress.0.prefix_list_ids.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"egress.0.protocol": {
+								"computed": false,
+								"new":      "-1",
+								"old":      "",
+							},
+							"egress.0.security_groups.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"egress.0.self": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"egress.0.to_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ingress.#": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"ingress.0.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"ingress.0.cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"ingress.0.cidr_blocks.0": {
+								"computed": false,
+								"new":      "0.0.0.0/0",
+								"old":      "",
+							},
+							"ingress.0.description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"ingress.0.from_port": {
+								"computed": false,
+								"new":      "22",
+								"old":      "",
+							},
+							"ingress.0.ipv6_cidr_blocks.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.0.prefix_list_ids.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.0.protocol": {
+								"computed": false,
+								"new":      "tcp",
+								"old":      "",
+							},
+							"ingress.0.security_groups.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.0.self": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"ingress.0.to_port": {
+								"computed": false,
+								"new":      "22",
+								"old":      "",
+							},
+							"ingress.1.%": {
+								"computed": false,
+								"new":      "9",
+								"old":      "",
+							},
+							"ingress.1.cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"ingress.1.cidr_blocks.0": {
+								"computed": false,
+								"new":      "0.0.0.0/0",
+								"old":      "",
+							},
+							"ingress.1.description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"ingress.1.from_port": {
+								"computed": false,
+								"new":      "80",
+								"old":      "",
+							},
+							"ingress.1.ipv6_cidr_blocks.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.1.prefix_list_ids.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.1.protocol": {
+								"computed": false,
+								"new":      "tcp",
+								"old":      "",
+							},
+							"ingress.1.security_groups.#": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"ingress.1.self": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"ingress.1.to_port": {
+								"computed": false,
+								"new":      "80",
+								"old":      "",
+							},
+							"name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-sg",
+								"old":      "",
+							},
+							"name_prefix": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"revoke_rules_on_delete": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"tags": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_security_group_rule": {
+				"egress": {
+					0: {
+						"applied": {
+							"cidr_blocks": [
+								"0.0.0.0/0",
+							],
+							"description":      null,
+							"from_port":        0,
+							"ipv6_cidr_blocks": null,
+							"prefix_list_ids":  null,
+							"protocol":         "-1",
+							"self":             false,
+							"to_port":          0,
+							"type":             "egress",
+						},
+						"destroy": false,
+						"diff": {
+							"cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cidr_blocks.0": {
+								"computed": false,
+								"new":      "0.0.0.0/0",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"from_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_blocks": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"prefix_list_ids": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"protocol": {
+								"computed": false,
+								"new":      "-1",
+								"old":      "",
+							},
+							"security_group_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"self": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"source_security_group_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"to_port": {
+								"computed": false,
+								"new":      "0",
+								"old":      "",
+							},
+							"type": {
+								"computed": false,
+								"new":      "egress",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"ingress": {
+					0: {
+						"applied": {
+							"cidr_blocks": [
+								"172.16.0.0/16",
+							],
+							"description":      null,
+							"from_port":        3306,
+							"ipv6_cidr_blocks": null,
+							"prefix_list_ids":  null,
+							"protocol":         "tcp",
+							"self":             false,
+							"to_port":          3306,
+							"type":             "ingress",
+						},
+						"destroy": false,
+						"diff": {
+							"cidr_blocks.#": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"cidr_blocks.0": {
+								"computed": false,
+								"new":      "172.16.0.0/16",
+								"old":      "",
+							},
+							"description": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"from_port": {
+								"computed": false,
+								"new":      "3306",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_blocks": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"prefix_list_ids": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"protocol": {
+								"computed": false,
+								"new":      "tcp",
+								"old":      "",
+							},
+							"security_group_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"self": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"source_security_group_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"to_port": {
+								"computed": false,
+								"new":      "3306",
+								"old":      "",
+							},
+							"type": {
+								"computed": false,
+								"new":      "ingress",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_subnet": {
+				"eks_subnet1": {
+					0: {
+						"applied": {
+							"assign_ipv6_address_on_creation": false,
+							"availability_zone":               "us-west-2a",
+							"cidr_block":                      "10.10.10.0/24",
+							"customer_owned_ipv4_pool":        null,
+							"ipv6_cidr_block":                 null,
+							"map_customer_owned_ip_on_launch": null,
+							"map_public_ip_on_launch":         true,
+							"outpost_arn":                     null,
+							"tags": {
+								"Name": "123456789123-acme-dev-eks-subnet",
+								"kubernetes.io/cluster/123456789123-acme-dev-eks": "shared",
+							},
+							"tags_all": {
+								"Name": "123456789123-acme-dev-eks-subnet",
+								"kubernetes.io/cluster/123456789123-acme-dev-eks": "shared",
+							},
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"assign_ipv6_address_on_creation": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"availability_zone": {
+								"computed": false,
+								"new":      "us-west-2a",
+								"old":      "",
+							},
+							"availability_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cidr_block": {
+								"computed": false,
+								"new":      "10.10.10.0/24",
+								"old":      "",
+							},
+							"customer_owned_ipv4_pool": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_block": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_block_association_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"map_customer_owned_ip_on_launch": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"map_public_ip_on_launch": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"outpost_arn": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-eks-subnet",
+								"old":      "",
+							},
+							"tags.kubernetes.io/cluster/123456789123-acme-dev-eks": {
+								"computed": false,
+								"new":      "shared",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags_all.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-eks-subnet",
+								"old":      "",
+							},
+							"tags_all.kubernetes.io/cluster/123456789123-acme-dev-eks": {
+								"computed": false,
+								"new":      "shared",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"eks_subnet2": {
+					0: {
+						"applied": {
+							"assign_ipv6_address_on_creation": false,
+							"availability_zone":               "us-west-2b",
+							"cidr_block":                      "10.10.11.0/24",
+							"customer_owned_ipv4_pool":        null,
+							"ipv6_cidr_block":                 null,
+							"map_customer_owned_ip_on_launch": null,
+							"map_public_ip_on_launch":         true,
+							"outpost_arn":                     null,
+							"tags": {
+								"Name": "123456789123-acme-dev-eks-subnet2",
+								"kubernetes.io/cluster/123456789123-acme-dev-eks": "shared",
+							},
+							"tags_all": {
+								"Name": "123456789123-acme-dev-eks-subnet2",
+								"kubernetes.io/cluster/123456789123-acme-dev-eks": "shared",
+							},
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"assign_ipv6_address_on_creation": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"availability_zone": {
+								"computed": false,
+								"new":      "us-west-2b",
+								"old":      "",
+							},
+							"availability_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cidr_block": {
+								"computed": false,
+								"new":      "10.10.11.0/24",
+								"old":      "",
+							},
+							"customer_owned_ipv4_pool": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_block": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_block_association_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"map_customer_owned_ip_on_launch": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"map_public_ip_on_launch": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"outpost_arn": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-eks-subnet2",
+								"old":      "",
+							},
+							"tags.kubernetes.io/cluster/123456789123-acme-dev-eks": {
+								"computed": false,
+								"new":      "shared",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": false,
+								"new":      "2",
+								"old":      "",
+							},
+							"tags_all.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-eks-subnet2",
+								"old":      "",
+							},
+							"tags_all.kubernetes.io/cluster/123456789123-acme-dev-eks": {
+								"computed": false,
+								"new":      "shared",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"web_subnet": {
+					0: {
+						"applied": {
+							"assign_ipv6_address_on_creation": false,
+							"availability_zone":               "us-west-2a",
+							"cidr_block":                      "172.16.10.0/24",
+							"customer_owned_ipv4_pool":        null,
+							"ipv6_cidr_block":                 null,
+							"map_customer_owned_ip_on_launch": null,
+							"map_public_ip_on_launch":         true,
+							"outpost_arn":                     null,
+							"tags": {
+								"Name": "123456789123-acme-dev-subnet",
+							},
+							"tags_all": {
+								"Name": "123456789123-acme-dev-subnet",
+							},
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"assign_ipv6_address_on_creation": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"availability_zone": {
+								"computed": false,
+								"new":      "us-west-2a",
+								"old":      "",
+							},
+							"availability_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cidr_block": {
+								"computed": false,
+								"new":      "172.16.10.0/24",
+								"old":      "",
+							},
+							"customer_owned_ipv4_pool": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_block": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_block_association_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"map_customer_owned_ip_on_launch": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"map_public_ip_on_launch": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"outpost_arn": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-subnet",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags_all.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-subnet",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"web_subnet2": {
+					0: {
+						"applied": {
+							"assign_ipv6_address_on_creation": false,
+							"availability_zone":               "us-west-2b",
+							"cidr_block":                      "172.16.11.0/24",
+							"customer_owned_ipv4_pool":        null,
+							"ipv6_cidr_block":                 null,
+							"map_customer_owned_ip_on_launch": null,
+							"map_public_ip_on_launch":         true,
+							"outpost_arn":                     null,
+							"tags": {
+								"Name": "123456789123-acme-dev-subnet2",
+							},
+							"tags_all": {
+								"Name": "123456789123-acme-dev-subnet2",
+							},
+							"timeouts": null,
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"assign_ipv6_address_on_creation": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"availability_zone": {
+								"computed": false,
+								"new":      "us-west-2b",
+								"old":      "",
+							},
+							"availability_zone_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"cidr_block": {
+								"computed": false,
+								"new":      "172.16.11.0/24",
+								"old":      "",
+							},
+							"customer_owned_ipv4_pool": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_block": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_block_association_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"map_customer_owned_ip_on_launch": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"map_public_ip_on_launch": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"outpost_arn": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-subnet2",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags_all.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-subnet2",
+								"old":      "",
+							},
+							"timeouts": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"vpc_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_volume_attachment": {
+				"ebs_att": {
+					0: {
+						"applied": {
+							"device_name":  "/dev/sdh",
+							"force_detach": null,
+							"skip_destroy": null,
+						},
+						"destroy": false,
+						"diff": {
+							"device_name": {
+								"computed": false,
+								"new":      "/dev/sdh",
+								"old":      "",
+							},
+							"force_detach": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"skip_destroy": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+							"volume_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"aws_vpc": {
+				"eks_vpc": {
+					0: {
+						"applied": {
+							"assign_generated_ipv6_cidr_block": false,
+							"cidr_block":                       "10.10.0.0/16",
+							"enable_dns_hostnames":             true,
+							"enable_dns_support":               true,
+							"instance_tenancy":                 "default",
+							"tags": {
+								"Name": "123456789123-acme-dev-eks-vpc",
+							},
+							"tags_all": {
+								"Name": "123456789123-acme-dev-eks-vpc",
+							},
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"assign_generated_ipv6_cidr_block": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"cidr_block": {
+								"computed": false,
+								"new":      "10.10.0.0/16",
+								"old":      "",
+							},
+							"default_network_acl_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"default_route_table_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"default_security_group_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"dhcp_options_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"enable_classiclink": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"enable_classiclink_dns_support": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"enable_dns_hostnames": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"enable_dns_support": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_tenancy": {
+								"computed": false,
+								"new":      "default",
+								"old":      "",
+							},
+							"ipv6_association_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_block": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"main_route_table_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-eks-vpc",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags_all.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-eks-vpc",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+				"web_vpc": {
+					0: {
+						"applied": {
+							"assign_generated_ipv6_cidr_block": false,
+							"cidr_block":                       "172.16.0.0/16",
+							"enable_dns_hostnames":             true,
+							"enable_dns_support":               true,
+							"instance_tenancy":                 "default",
+							"tags": {
+								"Name": "123456789123-acme-dev-vpc",
+							},
+							"tags_all": {
+								"Name": "123456789123-acme-dev-vpc",
+							},
+						},
+						"destroy": false,
+						"diff": {
+							"arn": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"assign_generated_ipv6_cidr_block": {
+								"computed": false,
+								"new":      "false",
+								"old":      "",
+							},
+							"cidr_block": {
+								"computed": false,
+								"new":      "172.16.0.0/16",
+								"old":      "",
+							},
+							"default_network_acl_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"default_route_table_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"default_security_group_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"dhcp_options_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"enable_classiclink": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"enable_classiclink_dns_support": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"enable_dns_hostnames": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"enable_dns_support": {
+								"computed": false,
+								"new":      "true",
+								"old":      "",
+							},
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"instance_tenancy": {
+								"computed": false,
+								"new":      "default",
+								"old":      "",
+							},
+							"ipv6_association_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"ipv6_cidr_block": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"main_route_table_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"owner_id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"tags.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-vpc",
+								"old":      "",
+							},
+							"tags_all.%": {
+								"computed": false,
+								"new":      "1",
+								"old":      "",
+							},
+							"tags_all.Name": {
+								"computed": false,
+								"new":      "123456789123-acme-dev-vpc",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+			"null_resource": {
+				"push_image": {
+					0: {
+						"applied": {
+							"triggers": null,
+						},
+						"destroy": false,
+						"diff": {
+							"id": {
+								"computed": true,
+								"new":      "",
+								"old":      "",
+							},
+							"triggers": {
+								"computed": false,
+								"new":      "",
+								"old":      "",
+							},
+						},
+						"requires_new": false,
+					},
+				},
+			},
+		},
+	},
+}
+
+module_paths = [
+	[],
+]
+
+terraform_version = "0.14.7"
+
+variables = {
+	"ami":                "ami-09a5b0b7edf08843d",
+	"availability_zone":  "us-west-2a",
+	"availability_zone2": "us-west-2b",
+	"company_name":       "acme",
+	"dbname":             "db1",
+	"environment":        "dev",
+	"neptune-dbname":     "neptunedb1",
+	"password":           "Aa1234321Bb",
+	"profile":            "default",
+	"region":             "us-west-2",
+}
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+path = _modules.root.path
+resources = _modules.root.resources

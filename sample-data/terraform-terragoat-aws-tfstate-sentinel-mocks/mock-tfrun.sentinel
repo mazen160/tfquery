@@ -1,0 +1,38 @@
+id = "run-dZrrVZJeZDuBBDzu"
+created_at = "2021-04-24T19:36:28.501Z"
+message = "Queued manually using Terraform"
+commit_sha = undefined
+speculative = false
+is_destroy = false
+target_addrs = null
+
+variables = {
+	"AWS_ACCESS_KEY_ID": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+	"AWS_SECRET_ACCESS_KEY": {
+		"category":  "terraform",
+		"sensitive": true,
+	},
+}
+
+organization = {
+	"name": "X",
+}
+
+workspace = {
+	"auto_apply":        false,
+	"created_at":        "2021-04-24T19:14:32.703Z",
+	"description":       null,
+	"id":                "ws-yXFrJ7NgCSCdTfCb",
+	"name":              "Workspace",
+	"vcs_repo":          null,
+	"working_directory": "",
+}
+
+cost_estimate = {
+	"delta_monthly_cost":    "71.66200000000000248",
+	"prior_monthly_cost":    "0.0",
+	"proposed_monthly_cost": "71.66200000000000248",
+}
