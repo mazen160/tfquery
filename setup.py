@@ -7,7 +7,8 @@ setup(name='tfquery',
       author_email='mazin@mazinahmed.net',
       packages=['tfquery'],
       entry_points={'console_scripts': ['tfquery=tfquery.__main__:main']},
-      url='http://pypi.python.org/pypi/tfquery/',
+      url='http://github.com/mazen160/tfquery',
       license='LICENSE.md',
       description='tfquery: Run SQL queries on your Terraform infrastructure. Query resources and analyze its configuration using a SQL-powered framework.',
-      long_description=open('README.md').read())
+      long_description=open('README.md').read(),
+      long_description_content_type = "text/markdown")
