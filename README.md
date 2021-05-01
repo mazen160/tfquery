@@ -17,7 +17,7 @@ tfquery is made to help in answering questions that are hard to answer about you
 
 # Why?
 
-infrastructure-as-code is the de-facto today for documenting and deploying infrastructure on cloud providers. As the organization grows, it becomes really hard to understand and analyze the deployed infrastructure. Grepping and searching for researches in Terraform state files is not enough. Terraform Modules are automating processes dynamically for infrastructure deployment, so searching for static resources is also not feasible for good visibility.
+infrastructure-as-code is the de-facto today for documenting and deploying infrastructure on cloud providers. As the organization grows, it becomes really hard to understand and analyze the deployed infrastructure. Grepping and searching for resources in Terraform state files is not enough. Terraform Modules are automating processes dynamically for infrastructure deployment, so searching for static resources is also not feasible for good visibility.
 
 With tfquery, you can run SQL queries on Terraform state files, and gain the best possible visibility.
 
@@ -224,6 +224,9 @@ Would like to contribute to tfquery? Here are some ideas that you may start with
 - Logo design: a logo design would be great.
 
 - Web interface representation with [coleifer/sqlite-web](https://github.com/coleifer/sqlite-web) - Thanks [@securityfu](https://twitter.com/securityfu/) for the idea!
+
+- Add a managed repository of pre-defined queries to enable teams to be able to query Terraform for different compliance and security controls.
+
 
 ### As you can see, there are many ways to support. Please help us make the project bigger for everyone!
 
