@@ -109,7 +109,7 @@ def run_query(tfstate_file, query):
     logging.basicConfig(format='%(message)s')
     log = logging.getLogger("tfquery")
     resources = parse_resources(tfstate_file)
-    s = SQLHandler(in_memory=True)
+    s = SQLHandler(tfstate_file=tfstate_file, in_memory=True)
     s.create_table(resources)
     s.insert_resources(resources)
     log.info(f">> {query}")
