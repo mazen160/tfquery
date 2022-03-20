@@ -13,6 +13,8 @@ def main():
         description='tfquery-cli: Run SQL queries on your Terraform infrastructure.')
     parser.add_argument('--tfstate', dest='tfstate', action='store',
                         help='Terraform .tfstate file.')
+    parser.add_argument('--tfplan', dest='tfplan', action='store',
+                        help='Terraform tfplan file.')
     parser.add_argument('--tfstate-dir', dest='tfstate_dir', action='store',
                         help='Directory of Terraform .tfstate files, for running queries on environments.')
     parser.add_argument('--query', '-q', dest='query', action='store',
@@ -21,7 +23,7 @@ def main():
                         help='DB path (optional. default: temporarily-generated database).')
     parser.add_argument('--interactive', '-i', dest='interactive_mode', action='store_true',
                         help='Interactive mode.')
-    parser.add_argument('--import', dest='import_tfstate', action='store_true',
+    parser.add_argument('--import', '--import-tfstate', dest='import_tfstate', action='store_true',
                         help='Import tfstate into database.')
     args = parser.parse_args()
     logging.basicConfig(format='%(message)s')
@@ -39,11 +41,11 @@ def main():
     if args.tfstate_dir:
         tfstates.extend(utils.get_all_tfstates(args.tfstate_dir))
 
-    if len(tfstates) == 0 and args.import_tfstate:
+    if len(tfstates) == 0 and args.import_tfstate and not args.tfplan:
         log.error("Terraform states are not provided. Run -h for help.")
         exit(1)
 
-    if len(tfstates) == 0 and args.db_path is None:
+    if len(tfstates) == 0 and args.db_path is None and not args.tfplan:
         log.error("Both Terraform states and database are not specified.")
         exit(1)
 
@@ -54,6 +56,8 @@ def main():
     if args.import_tfstate:
         for tfstate in tfstates:
             utils.import_tfstate(args.db_path, tfstate)
+        if args.tfplan:
+            utils.import_tfplan(args.db_path , args.tfplan)
 
     if args.query:
         s = SQLHandler(hide_attributes=True, db_path=args.db_path)
