@@ -3,3 +3,4 @@ internal-tests/
 *.egg-info
 build/
 *.egg
+venv/

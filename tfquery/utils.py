@@ -31,18 +31,18 @@ def import_tfstate(db_path, tfstate_file):
     s.insert_resources(resources)
     log.info(f"[+] Imported {len(resources)} resources from {tfstate_file}.")
 
-def import_tfplan(db_path, tfplan_file):
+def import_tfplan(db_path, tfplan_file, include_no_op=False):
     logging.basicConfig(format='%(message)s')
     log = logging.getLogger("tfquery")
     log.info(f"[i] tfplan file: {tfplan_file}")
-    changes = tfplan.parse_changes(tfplan_file)
+    changes = tfplan.parse_changes(tfplan_file, include_no_op=include_no_op)
     s = SQLHandler(hide_attributes=True, db_path=db_path, tfplan_file=tfplan_file)
     log.info(f"[i] DB Path: {s.db_path}")
 
     s.create_table([])
     for change in changes:
         s.insert_change(change)
-    log.info(f"[+] Imported {len(changes)} resources from {tfplan_file}.")
+    log.info(f"[+] Imported {len(changes)} changes from {tfplan_file}.")
 
 def beautify_json(j):
     return json.dumps(j, indent=4, sort_keys=True)

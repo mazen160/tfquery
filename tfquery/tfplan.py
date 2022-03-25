@@ -25,8 +25,8 @@ def prepare_tfplan(tfplan, include_no_op=False):
                 "type": None,"name": None,
                 "provider": None,
                 "change_actions": {"actions": []},
-                "change_before": {}, # dict,
-                "change_after": {}, # dict,
+                "change_before": {},
+                "change_after": {},
                 "diff_keys": []
                 }
         # after_unknown, after_sensitive, before_sensitive
