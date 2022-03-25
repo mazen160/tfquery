@@ -262,7 +262,7 @@ Would like to contribute to tfquery? Here are some ideas that you may start with
 
 - [x] ~~Connect resources with terraform state base name: For environments with many workspaces, each workspace can have a different name, it would be nice to add a column for terraform state file base name, to help in querying across different workspaces.~~
 
-- tfplan parsing: Allow parsing of tfplan files. This can be an opening addition for implementing a new CI security scanner for Terraform deployments.
+- [x] ~~tfplan parsing: Allow parsing of tfplan files. This can be an opening addition for implementing a new CI security scanner for Terraform deployments.~~
 
 - Logo design: a logo design would be great.
 
