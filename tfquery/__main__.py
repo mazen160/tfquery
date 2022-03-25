@@ -14,7 +14,7 @@ def main():
     parser.add_argument('--tfstate', dest='tfstate', action='store',
                         help='Terraform .tfstate file.')
     parser.add_argument('--tfplan', dest='tfplan', action='store',
-                        help='Terraform tfplan file.')
+                        help='Terraform tfplan JSON file.')
     parser.add_argument('--tfstate-dir', dest='tfstate_dir', action='store',
                         help='Directory of Terraform .tfstate files, for running queries on environments.')
     parser.add_argument('--query', '-q', dest='query', action='store',
