@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 setup(name='tfquery',
-      version='0.0.2',
+      version='0.3.0',
       author='Mazin Ahmed',
       author_email='mazin@mazinahmed.net',
       packages=['tfquery'],
