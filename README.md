@@ -33,6 +33,8 @@ With tfquery, you can run SQL queries on Terraform state files, and gain the bes
 
 - Write custom queries to scan Terraform resources.
 
+- Scan current Terraform plan for new risky changes.
+
 ---
 
 # tfquery vs. Cloud-specific SQL engines?
@@ -46,6 +48,9 @@ There are cloud-specific SQL engines that allow you to run SQL queries to unders
 ---
 
 # 📖 Usage
+
+
+## tfstate
 
 #### Run SQL query on Terraform states
 
@@ -67,6 +72,7 @@ There are cloud-specific SQL engines that allow you to run SQL queries to unders
 [i] Resources Count: 1475
 ```
 
+
 ## Advanced Usage
 
 ### Migrate Version 3 to Version 4 Terraform states
@@ -81,34 +87,57 @@ This is a parsing library to migrate the older Version 3 Terraform states to a V
 
 ```
 
+## tfplan
+
+#### Run SQL queries on Terraform changes through Terraform Plan (tfplan)
+
+1) Save the Terraform plan
+
+```
+$ terraform plan -out saved.plan
+$ terraform show -json saved.json > current.tfplan
+```
+
+2) Run tfquery on the Terraform Plan
+
+```python
+>>> import tfquery
+
+>>> result = tfquery.tfplan.run_query("current.tfplan", "select count(*) from changes")
+>> print(result)
+[{'count(*)': 10}]
+```
+
+
 ## 🖲️ Command-Line (`tfquery`)
 
 TFquery is also available as a CLI tool. It can be used to run SQL queries directly on Terraform states, and for importing resources into persistent storage.
 
 ```shell
 mazin@hackbox$> tfquery -h
+usage: tfquery [-h] [--tfstate TFSTATE] [--tfplan TFPLAN] [--tfstate-dir TFSTATE_DIR] [--query QUERY] [--db DB_PATH] [--interactive] [--import] [--include-tfplan-no-op]
 
-usage: tfquery [-h] [--tfstate TFSTATE] [--tfstate-dir TFSTATE_DIR]
-                      [--query QUERY] [--db DB_PATH] [--interactive] [--import]
-
-tfquery: Run SQL queries on your Terraform infrastructure.
+tfquery-cli: Run SQL queries on your Terraform infrastructure.
 
 optional arguments:
   -h, --help            show this help message and exit
   --tfstate TFSTATE     Terraform .tfstate file.
+  --tfplan TFPLAN       Terraform tfplan JSON file.
   --tfstate-dir TFSTATE_DIR
-                        Directory of Terraform .tfstate files, for running queries on
-                        environments.
+                        Directory of Terraform .tfstate files, for running queries on environments.
   --query QUERY, -q QUERY
                         SQL query to execute.
   --db DB_PATH          DB path (optional. default: temporarily-generated database).
   --interactive, -i     Interactive mode.
-  --import              Import tfstate into database.
+  --import              Import tfstate and tfplan into database.
+  --include-tfplan-no-op
+                        Include tfplan no-op actions.
+
 ```
 
 ### Examples
 
-- **Run SQL query for a directory of multiple Terraform states (for multiple workspaces).**:
+- **Run SQL query for a directory of multiple Terraform states (for multiple workspaces).**
 
 ```python
 $ tfquery -q 'select count(*) as count from resources;'  --tfstate-dir /path/to/terraform-states
@@ -135,6 +164,20 @@ $ tfquery --db tfstate.db -q 'select count(*) as count from resources;'
 [
     {
         "count": 386
+    }
+]
+```
+- **Run Tfplan queries on current changes**
+
+```python
+$ terraform plan -out saved.plan
+$ terraform show -json saved.json > current.tfplan
+
+$ tfquery --tfplan current.tfplan -q "select count(*) as count from changes"
+
+[
+    {
+        "count": 10
     }
 ]
 ```
@@ -219,7 +262,7 @@ Would like to contribute to tfquery? Here are some ideas that you may start with
 
 - [x] ~~Connect resources with terraform state base name: For environments with many workspaces, each workspace can have a different name, it would be nice to add a column for terraform state file base name, to help in querying across different workspaces.~~
 
-- tfplan parsing: Allow parsing of tfplan files. This can be an opening addition for implementing a new CI security scanner for Terraform deployments.
+- [x] ~~tfplan parsing: Allow parsing of tfplan files. This can be an opening addition for implementing a new CI security scanner for Terraform deployments.~~
 
 - Logo design: a logo design would be great.
 
